@@ -63,7 +63,7 @@ Things TODO
 You can contribute.
 
 * [ ] Save ArrayList to SharedPreferences.
-* [ ] Save List<Object> to SharedPreferences.
+* [ ] Save List of Object to SharedPreferences.
 
 License
 --------
