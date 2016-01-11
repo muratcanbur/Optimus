@@ -108,7 +108,7 @@ public final class Optimus {
 
   /**
    * retrieves a stored double value.
-   * <p/>
+   * <p>
    * The correct way of dealing with this is to convert the double to its 'raw long bits' equivalent and store that long.
    * When we're reading the value, we just convert back to double.
    */
@@ -192,7 +192,7 @@ public final class Optimus {
 
     private String prefsName;
     private Context context;
-    private int mode;
+    private int mode = ContextWrapper.MODE_PRIVATE;
 
     /**
      * the application's packagename should be the filename of the SharedPreference instance
@@ -207,14 +207,6 @@ public final class Optimus {
      */
     public Fabricate setContext(final Context context) {
       this.context = context;
-      return this;
-    }
-
-    /**
-     * The mode should be set MODE_PRIVATE
-     */
-    public Fabricate setMode(final int mode) {
-      this.mode = ContextWrapper.MODE_PRIVATE;
       return this;
     }
 
