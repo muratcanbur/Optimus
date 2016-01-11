@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import android.os.Build;
 import android.text.TextUtils;
 
 import java.util.HashSet;
@@ -132,12 +131,7 @@ public final class Optimus {
   public static void remove(final String key) {
     SharedPreferences prefs = getOptimusPref();
     final Editor editor = prefs.edit();
-    editor.remove(key);
-    if (Build.VERSION.SDK_INT > Build.VERSION_CODES.GINGERBREAD) {
-      editor.apply();
-    } else {
-      editor.commit();
-    }
+    editor.remove(key).apply();
   }
 
   /**
@@ -145,14 +139,7 @@ public final class Optimus {
    */
   public static void putStringSet(String key, HashSet<String> value) {
     final Editor editor = getOptimusPref().edit();
-    if (value != null && !value.isEmpty()) {
-      editor.putStringSet(key, value);
-      if (Build.VERSION.SDK_INT > Build.VERSION_CODES.GINGERBREAD) {
-        editor.apply();
-      } else {
-        editor.commit();
-      }
-    }
+    editor.putStringSet(key, value);
   }
 
   /**
