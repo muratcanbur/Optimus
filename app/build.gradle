@@ -23,7 +23,7 @@ dependencies {
   compile fileTree(dir: 'libs', include: ['*.jar'])
   testCompile 'junit:junit:4.12'
   compile 'com.android.support:appcompat-v7:23.1.1'
-  compile project(':optimus')
+  compile 'com.github.muratcanbur:Optimus:0.0.1'
 
   //stetho
   compile "com.facebook.stetho:stetho:1.2.0"

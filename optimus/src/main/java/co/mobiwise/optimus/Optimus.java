@@ -26,8 +26,9 @@ public final class Optimus {
   public static SharedPreferences getOptimusPref() {
     if (preferences != null) {
       return preferences;
+    } else {
+      throw new RuntimeException("You should initialize Optimus inside onCreate of the Application class");
     }
-    return null;
   }
 
   /**

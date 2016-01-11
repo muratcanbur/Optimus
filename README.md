@@ -56,7 +56,6 @@ public class OptimusApp extends Application {
 -   Optimus.getBoolean("saved_boolean_value",false);
 -   Optimus.getString("saved__string_value", "default__string_value");
 -   Optimus.getInt("saved_int_value",0);
--   
 
 License
 --------
