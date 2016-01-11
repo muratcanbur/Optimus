@@ -57,6 +57,14 @@ public class OptimusApp extends Application {
 -   Optimus.getString("saved__string_value", "default__string_value");
 -   Optimus.getInt("saved_int_value",0);
 
+  
+Things TODO
+-----------
+You can contribute.
+
+* [ ] Save ArrayList to SharedPreferences.
+* [ ] Save List<Object> to SharedPreferences.
+
 License
 --------
 
