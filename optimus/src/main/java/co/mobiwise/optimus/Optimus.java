@@ -63,7 +63,7 @@ public final class Optimus {
   /**
    * retrieves a stored String value.
    */
-  public static String getString(Context context, final String key, final String defaultValue) {
+  public static String getString(final String key, final String defaultValue) {
     return getOptimusPref().getString(key, defaultValue);
   }
 
