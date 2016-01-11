@@ -4,7 +4,27 @@
 
 - You should initialize this library inside the onCreate of the Application class of your app.
 
+## Getting Started
 
+Step 1. Add the JitPack repository to your build file.
+
+## Gradle ##
+```
+repositories {
+    maven {
+        url "https://jitpack.io"
+    }
+}
+```
+
+Step 2 . Add the dependency.
+```
+dependencies {
+  compile 'com.github.muratcanbur:Optimus:0.0.1'
+}
+```
+
+## initialization
 ```Java
 public class OptimusApp extends Application {
   @Override
