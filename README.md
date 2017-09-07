@@ -46,17 +46,19 @@ public class OptimusApp extends Application {
 
 ## Write to Shared Preferences
 
--    Optimus.putInt("saved_int_value", 10);
--    Optimus.putString("saved__string_value", "Calling all Autobots");
--    Optimus.putBoolean("saved_boolean_value", true);
-
+```Java
+   Optimus.putInt("saved_int_value", 10);
+   Optimus.putString("saved__string_value", "Calling all Autobots");
+   Optimus.putBoolean("saved_boolean_value", true);
+```
 
 ## Read from Shared Preferences
 
--   Optimus.getBoolean("saved_boolean_value",false);
--   Optimus.getString("saved__string_value", "default__string_value");
--   Optimus.getInt("saved_int_value",0);
-
+```Java
+    Optimus.getBoolean("saved_boolean_value",false);   
+    Optimus.getString("saved__string_value", "default__string_value");
+    Optimus.getInt("saved_int_value",0);
+```
   
 Things TODO
 -----------
