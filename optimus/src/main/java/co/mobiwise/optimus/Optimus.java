@@ -5,6 +5,9 @@ import android.content.ContextWrapper;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.text.TextUtils;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import java.lang.reflect.Type;
 
 import java.util.HashSet;
 
@@ -155,7 +158,6 @@ public final class Optimus {
   public static Editor removeAll() {
     final Editor editor = getOptimusPref().edit().clear();
     editor.apply();
-    return editor;
   }
 
   /**
@@ -171,7 +173,17 @@ public final class Optimus {
   public static Editor getEditor() {
     return getOptimusPref().edit();
   }
+  
+  public static void putStringListWithName(String key, List<String> list){
+    Gson gson = new Gson();
+    editor.putString(key, gson.toJson(list));
+  }
 
+  public static List<String> getStringListWithName(String key, List<String> list){
+    Type type = new TypeToken<List<String>>(){}.getType();
+    List<String> stringList = gson.fromJson(getOptimusPref().getString(key, defaultValue), type);
+    return stringList;
+  }
 
   /**
    * This is a builder class for the Optimus instance.
